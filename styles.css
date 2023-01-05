@@ -33,7 +33,7 @@ body {
 }
 
 .main {
-  padding: 1.5em;
+  padding: 1em;
   width: clamp(350px, 100%, calc(var(--card-size) * 4));
   margin: auto;
   display: flex;
@@ -71,7 +71,7 @@ body {
 
 .header {
   color: #760172;
-  width: 6em;
+  width: 5em;
   font-size: 2.5rem;
   font-weight: 900;
   font-variation-settings: "wght" 900;
@@ -143,11 +143,11 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 2.5em;
-  gap: 3em;
+  gap: 2em;
 }
 
 .project-image {
-  height: 40%;
+  height: 35%;
 }
 
 .project-about {
