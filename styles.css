@@ -1,0 +1,179 @@
+/* ## General Setup */
+:root {
+  --card-size: 12em; /* Used to conveniently scale cards */
+}
+
+@font-face {
+  font-family: "Cantarell";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("fonts/Cantarell-VF.woff2") format("woff2"),
+    url("fonts/Cantarell-VF.otf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cantarell";
+  font-weight: 400;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.main {
+  padding: 1.5em;
+  width: clamp(350px, 100%, calc(var(--card-size) * 4));
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+/* ## Global Card Styles */
+.card {
+  /* Edit the `--card-size` variable in the top of this document*/
+  height: calc(var(--card-size) - var(--card-size) / 10);
+  border-radius: 12px;
+  /* Used for layout debugging: */
+  /* border: 1px solid red; */
+}
+
+.card-square {
+  flex-basis: var(--card-size);
+  flex-grow: 1;
+}
+
+.card-wide {
+  flex-basis: calc(var(--card-size) * 2);
+  flex-grow: 2;
+}
+
+/* ## Header Card */
+.card-header {
+  background: linear-gradient(125deg, rgba(246,206,51,1) 0%, rgba(221,113,41,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5em;
+}
+
+.header {
+  color: #760172;
+  width: 6em;
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+}
+
+.profile-picture {
+  height: 5em;
+}
+
+/* ## Social Card */
+.card-social {
+  background: linear-gradient(125deg, rgba(192,97,203,1) 0%, rgba(129,61,156,1) 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: calc(var(--card-size) / 7);
+  gap: 1.5em;
+}
+
+.card-social-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: inherit;
+}
+
+.social-icon {
+  height: 2.5em;
+  opacity: 0.8;
+  transition: transform 100ms;
+}
+
+.social-icon:hover {
+  transform: scale(1.05);
+}
+
+/* ## Info Cards */
+.card-info {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info-image {
+  height: 50%;
+  opacity: 0.8;
+}
+
+.info-text {
+  color: #FFFFFF;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.card-info-blue {
+  background: linear-gradient(125deg, rgba(153,193,241,1) 0%, rgba(28,113,216,1) 100%);
+}
+
+.card-info-green {
+  background: linear-gradient(125deg, rgba(87,227,137,1) 0%, rgba(38,162,105,1) 100%);
+}
+
+/* ## Project Cards */
+.card-project {
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5em;
+  gap: 3em;
+}
+
+.project-image {
+  height: 40%;
+}
+
+.project-about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  color: #555555;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #777777;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #242424;
+  }
+
+  .project-title {
+    color: #AAAAAA;
+  }
+}
