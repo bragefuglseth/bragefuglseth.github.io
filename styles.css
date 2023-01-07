@@ -1,6 +1,6 @@
 /* ## General Setup */
 :root {
-  --card-size: 12em; /* Used to conveniently scale cards */
+  --card-size: 11em; /* Used to conveniently scale cards */
 }
 
 @font-face {
@@ -33,7 +33,7 @@ body {
 }
 
 .main {
-  padding: 1em;
+  padding: 1.5em 1em;
   width: clamp(350px, 100%, calc(var(--card-size) * 4));
   margin: auto;
   display: flex;
