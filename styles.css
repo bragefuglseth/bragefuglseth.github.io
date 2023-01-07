@@ -1,6 +1,6 @@
 /* ## General Setup */
 :root {
-  --card-size: 11em; /* Used to conveniently scale cards */
+  --card-size: 12em; /* Used to conveniently scale cards */
 }
 
 @font-face {
