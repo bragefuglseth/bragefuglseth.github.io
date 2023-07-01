@@ -197,6 +197,8 @@ body {
 /* ## Project Cards */
 .card-project {
   border: 1px solid var(--border);
+  text-decoration: none;
+  text-decoration-color: var(--text3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,7 +206,11 @@ body {
   gap: 2em;
 }
 
-.project-image {
+a.card-project:hover {
+  text-decoration: underline;
+}
+
+.project-icon {
   height: 35%;
 }
 
