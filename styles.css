@@ -59,25 +59,20 @@
   --background-color: rgb(255,255,255);
   --background-color-dark: rgb(36, 36, 36);
 
-  --card-size: 12em; /* Used to conveniently scale cards */
+  --card-size: 12rem; /* Used to conveniently scale cards */
+
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 }
 
-@font-face {
-  font-family: "Cantarell";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: "Regular";
-  src: url("fonts/Cantarell-VF.woff2") format("woff2"),
-    url("fonts/Cantarell-VF.otf") format("opentype");
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Cantarell";
-  font-weight: 400;
 }
 
 body {
@@ -97,7 +92,7 @@ body {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5em;
+  gap: 1.2rem;
 }
 
 /* ## Global Card Styles */
@@ -144,7 +139,7 @@ body {
 .card-social {
   background: linear-gradient(125deg, var(--purple2) 0%, var(--purple4) 100%);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   padding: calc(var(--card-size) / 7);
@@ -197,10 +192,9 @@ body {
 /* ## Project Cards */
 .card-project {
   border: 1px solid var(--border);
-  text-decoration: none;
-  text-decoration-color: var(--text3);
+  text-decoration-line: none;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 0 2.5em;
   gap: 2em;
@@ -208,6 +202,7 @@ body {
 
 a.card-project:hover {
   text-decoration: underline;
+  text-decoration-color: var(--text3);
 }
 
 .project-icon {
