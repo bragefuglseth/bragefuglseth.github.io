@@ -1,239 +1,63 @@
-/* ## General Setup */
-:root {
-  --blue1: rgb(153,193,241);
-  --blue2: rgb(98,160,234);
-  --blue3: rgb(53,132,228);
-  --blue4: rgb(28,113,216);
-  --blue5: rgb(26,95,180);
-  --green1: rgb(143,240,164);
-  --green2: rgb(87,227,137);
-  --green3: rgb(51,209,122);
-  --green4: rgb(46,194,126);
-  --green5: rgb(38,162,105);
-  --yellow1: rgb(249,240,107);
-  --yellow2: rgb(248,228,92);
-  --yellow3: rgb(246,211,45);
-  --yellow4: rgb(245,194,17);
-  --yellow5: rgb(229,165,10);
-  --orange1: rgb(255,190,111);
-  --orange2: rgb(255,163,72);
-  --orange3: rgb(255,120,0);
-  --orange4: rgb(230,97,0);
-  --orange5: rgb(198,70,0);
-  --red1: rgb(246,97,81);
-  --red2: rgb(237,51,59);
-  --red3: rgb(224,27,36);
-  --red4: rgb(192,28,40);
-  --red5: rgb(165,29,45);
-  --purple1: rgb(220,138,221);
-  --purple2: rgb(192,97,203);
-  --purple3: rgb(145,65,172);
-  --purple4: rgb(129,61,156);
-  --purple5: rgb(97,53,131);
-  --brown1: rgb(205,171,143);
-  --brown2: rgb(181,131,90);
-  --brown3: rgb(152,106,68);
-  --brown4: rgb(134,94,60);
-  --brown5: rgb(99,69,44);
-  --light1: rgb(255,255,255);
-  --light2: rgb(246,245,244);
-  --light3: rgb(222,221,218);
-  --light4: rgb(192,191,188);
-  --light5: rgb(154,153,150);
-  --dark1: rgb(119,118,123);
-  --dark2: rgb(94,92,100);
-  --dark3: rgb(61,56,70);
-  --dark4: rgb(36,31,49);
-  --dark5: rgb(0,0,0);
-
-  --brage-purple: rgb(118, 1, 114);
-  --brage-yellow: rgb(246,206,51);
-  --brage-orange: rgba(221,113,41,1);
-
-  --text1: rgba(255,255,255, 0.8);
-  --text2: rgba(255,255,255, 0.9);
-  --text3: rgb(85, 85, 85);
-  --text4: rgb(119, 119, 119);
-  --text5: rgb(170, 170, 170);
-  --border: rgba(120, 120, 120, 0.4);
-  --background-color: rgb(255,255,255);
-  --background-color-dark: rgb(36, 36, 36);
-
-  --card-size: 12rem; /* Used to conveniently scale cards */
-
-  font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-}
-
-@supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
-}
-
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  background-color: var(--background-color);
-}
+  --background-color: #EEF;
+  --fg-color: #334;
+  background: var(--background-color);
+  color: var(--fg-color);
 
-.container {
-  display: flex;
-  align-items: center;
-  align-content: center;
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 60ch;
   min-height: 100vh;
-}
-
-.main {
-  padding: 1.5em 1em;
-  width: clamp(350px, 100%, calc(var(--card-size) * 4));
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-/* ## Global Card Styles */
-.card {
-  /* Edit the `--card-size` variable in the top of this document*/
-  height: calc(var(--card-size) - var(--card-size) / 10);
-  border-radius: 12px;
-  /* Used for layout debugging: */
-  /* border: 1px solid red; */
-}
-
-.card-square {
-  flex-basis: var(--card-size);
-  flex-grow: 1;
-}
-
-.card-wide {
-  flex-basis: calc(var(--card-size) * 2);
-  flex-grow: 2;
-}
-
-/* ## Header Card */
-.card-header {
-  background: linear-gradient(125deg, var(--brage-yellow) 0%, var(--brage-orange) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0.5em;
-}
-
-.header {
-  color: var(--brage-purple);
-  width: 5em;
-  font-size: 2.5rem;
-  font-weight: 900;
-  font-variation-settings: "wght" 900;
-}
-
-.profile-picture {
-  height: 5em;
-}
-
-/* ## Social Card */
-.card-social {
-  background: linear-gradient(125deg, var(--purple2) 0%, var(--purple4) 100%);
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  align-content: center;
-  padding: calc(var(--card-size) / 7);
-  gap: 1.5em;
-}
-
-.card-social-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: inherit;
-}
-
-.social-icon {
-  height: 2.5em;
-  opacity: 0.8;
-  transition: transform 100ms;
-}
-
-.social-icon:hover {
-  transform: scale(1.05);
-}
-
-/* ## Info Cards */
-.card-info {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.info-image {
-  height: 50%;
-  opacity: 0.8;
-}
-
-.info-text {
-  color: var(--text2);
-  text-align: center;
-}
-
-.card-info-blue {
-  background: linear-gradient(125deg, var(--blue1) 0%, var(--blue4) 100%);
-}
-
-.card-info-green {
-  background: linear-gradient(125deg, var(--green2) 0%, var(--green5) 100%);
-}
-
-/* ## Project Cards */
-.card-project {
-  border: 1px solid var(--border);
-  text-decoration-line: none;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 0 2.5em;
-  gap: 2em;
-}
-
-a.card-project:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--text3);
-}
-
-.project-icon {
-  height: 96px;
-}
-
-.project-about {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.project-title {
-  font-size: 1.5rem;
-  font-weight: 900;
-  font-variation-settings: "wght" 900;
-  color: var(--text3);
-}
-
-.project-description {
-  font-size: 1rem;
-  color: var(--text4);
+  font-family: "Inter Variable";
+  letter-spacing: -0.01em;
+  word-spacing: -0.01em;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: var(--background-color-dark);
-  }
-
-  .project-title {
-    color: var(--text5);
+    --background-color: #334;
+    --fg-color: #EEF;
   }
 }
 
+/* Typography */
+
+h1 {
+  font-weight: 800;
+  font-size: 24pt;
+  margin: 0.5em 0em;
+}
+h2 {
+  font-weight: 800;
+  font-weight: 22pt;
+}
+
+p {
+  line-height: 1.5em;
+  font-size: 12pt;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: underline;
+  color: currentColor;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.donation-buttons {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
