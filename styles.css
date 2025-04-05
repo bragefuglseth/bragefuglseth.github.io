@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-family: "InterVariable", "Inter", sans-serif;
+  letter-spacing: -0.01em;
+  word-spacing: -0.01em;
+}
+
 body {
   --background-color: #EEF;
   --fg-color: #334;
@@ -16,9 +22,6 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  font-family: "InterVariable", "Inter", sans-serif;
-  letter-spacing: -0.01em;
-  word-spacing: -0.01em;
 }
 
 @media (prefers-color-scheme: dark) {
