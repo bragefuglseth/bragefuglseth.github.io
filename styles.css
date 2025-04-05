@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  font-family: "Inter Variable", "Inter", sans-serif;
+  font-family: "InterVariable", "Inter", sans-serif;
   letter-spacing: -0.01em;
   word-spacing: -0.01em;
 }
