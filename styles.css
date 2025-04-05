@@ -9,14 +9,14 @@ body {
   color: var(--fg-color);
 
   margin: 0 auto;
-  padding: 24px;
+  padding: 24px 12px;
   max-width: 60ch;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  font-family: "Inter Variable";
+  font-family: "Inter Variable", "Inter", sans-serif;
   letter-spacing: -0.01em;
   word-spacing: -0.01em;
 }
