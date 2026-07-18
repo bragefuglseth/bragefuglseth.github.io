@@ -1,3 +1,3 @@
-# bragefuglseth.dev
+# bragefuglseth.no
 
 My personal website.
